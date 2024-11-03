@@ -3,22 +3,22 @@ import random
 class Queue:
     """
     A class representing a queue data structure.
+    
     Methods
-    -------
-    __init__():
-        Initializes an empty queue.
-    isEmpty():
-        Checks if the queue is empty.
-    enqueue(item):
-        Adds an item to the queue.
-    dequeue():
-        Removes and returns the item from the front of the queue.
-    size():
-        Returns the number of items in the queue.
-    __iter__():
-        Returns an iterator for the queue.
-    __next__():
-        Returns the next item in the queue during iteration.
+        __init__():
+            Initializes an empty queue.
+        isEmpty():
+            Checks if the queue is empty.
+        enqueue(item):
+            Adds an item to the queue.
+        dequeue():
+            Removes and returns the item from the front of the queue.
+        size():
+            Returns the number of items in the queue.
+        __iter__():
+            Returns an iterator for the queue.
+        __next__():
+            Returns the next item in the queue during iteration.
     """
     def __init__(self):
         self.items = []
@@ -46,24 +46,24 @@ class Queue:
 class Stack:
     """
     Stack Abstract Data Structure
+    
     Methods
-    -------
-    __init__():
-        Initializes an empty stack.
-    isEmpty():
-        Checks if the stack is empty.
-    push(item):
-        Adds an item to the top of the stack.
-    pop():
-        Removes and returns the item from the top of the stack.
-    peek():
-        Returns the item from the top of the stack without removing it.
-    size():
-        Returns the number of items in the stack.
-    __iter__():
-        Returns an iterator for the stack.
-    __next__():
-        Returns the next item from the stack during iteration.
+        __init__():
+            Initializes an empty stack.
+        isEmpty():
+            Checks if the stack is empty.
+        push(item):
+            Adds an item to the top of the stack.
+        pop():
+            Removes and returns the item from the top of the stack.
+        peek():
+            Returns the item from the top of the stack without removing it.
+        size():
+            Returns the number of items in the stack.
+        __iter__():
+            Returns an iterator for the stack.
+        __next__():
+            Returns the next item from the stack during iteration.
     """
 
     def __init__(self):
@@ -97,26 +97,26 @@ class Stack:
 class Deque:
     """
     A class representing a deque data structure.
+    
     Methods
-    -------
-    __init__():
-        Initializes an empty deque.
-    isEmpty():
-        Checks if the deque is empty.
-    addFront(item):
-        Adds an item to the front of the deque.
-    addRear(item):
-        Adds an item to the rear of the deque.
-    removeFront():
-        Removes and returns the item from the front of the deque.
-    removeRear():
-        Removes and returns the item from the rear of the deque.
-    size():
-        Returns the number of items in the deque.
-    __iter__():
-        Returns an iterator for the deque.
-    __next__():
-        Returns the next item in the deque during iteration.
+        __init__():
+            Initializes an empty deque.
+        isEmpty():
+            Checks if the deque is empty.
+        addFront(item):
+            Adds an item to the front of the deque.
+        addRear(item):
+            Adds an item to the rear of the deque.
+        removeFront():
+            Removes and returns the item from the front of the deque.
+        removeRear():
+            Removes and returns the item from the rear of the deque.
+        size():
+            Returns the number of items in the deque.
+        __iter__():
+            Returns an iterator for the deque.
+        __next__():
+            Returns the next item in the deque during iteration.
     """
     def __init__(self):
         self.items = []
@@ -152,20 +152,20 @@ class Deque:
 class Bag:
     """
     A class representing a bag data structure.
+    
     Methods
-    -------
-    __init__():
-        Initializes an empty bag.
-    isEmpty():
-        Checks if the bag is empty.
-    add(item):
-        Adds an item to the bag.
-    size():
-        Returns the number of items in the bag.
-    __iter__():
-        Returns an iterator for the bag.
-    __next__():
-        Returns the next item in the bag during iteration.
+        __init__():
+            Initializes an empty bag.
+        isEmpty():
+            Checks if the bag is empty.
+        add(item):
+            Adds an item to the bag.
+        size():
+            Returns the number of items in the bag.
+        __iter__():
+            Returns an iterator for the bag.
+        __next__():
+            Returns the next item in the bag during iteration.
     """
     def __init__(self):
         self.items = []
