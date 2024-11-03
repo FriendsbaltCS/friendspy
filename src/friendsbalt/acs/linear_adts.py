@@ -4,7 +4,7 @@ class Queue:
     """
     A class representing a queue data structure.
     
-    Methods
+    Methods:
         __init__():
             Initializes an empty queue.
         isEmpty():
@@ -47,7 +47,7 @@ class Stack:
     """
     Stack Abstract Data Structure
     
-    Methods
+    Methods:
         __init__():
             Initializes an empty stack.
         isEmpty():
@@ -98,7 +98,7 @@ class Deque:
     """
     A class representing a deque data structure.
     
-    Methods
+    Methods:
         __init__():
             Initializes an empty deque.
         isEmpty():
@@ -153,7 +153,7 @@ class Bag:
     """
     A class representing a bag data structure.
     
-    Methods
+    Methods:
         __init__():
             Initializes an empty bag.
         isEmpty():
