@@ -1,4 +1,5 @@
 import random
+import warnings
 
 class Queue:
     """
@@ -24,6 +25,17 @@ class Queue:
         self.items = []
 
     def isEmpty(self):
+        """
+        Deprecated: Use is_empty() instead.
+        """
+        warnings.warn(
+            "isEmpty() is deprecated, use is_empty() instead",
+            DeprecationWarning,
+            stacklevel=2
+        )
+        return self.items == []
+
+    def is_empty(self):
         return self.items == []
 
     def enqueue(self, item):
@@ -70,6 +82,17 @@ class Stack:
         self.items = []
 
     def isEmpty(self):
+        """
+        Deprecated: Use is_empty() instead.
+        """
+        warnings.warn(
+            "isEmpty() is deprecated, use is_empty() instead",
+            DeprecationWarning,
+            stacklevel=2
+        )
+        return self.items == []
+
+    def is_empty(self):
         return self.items == []
 
     def push(self, item):
@@ -122,6 +145,17 @@ class Deque:
         self.items = []
 
     def isEmpty(self):
+        """
+        Deprecated: Use is_empty() instead.
+        """
+        warnings.warn(
+            "isEmpty() is deprecated, use is_empty() instead",
+            DeprecationWarning,
+            stacklevel=2
+        )
+        return self.items == []
+    
+    def is_empty(self):
         return self.items == []
 
     def addFront(self, item):
@@ -156,7 +190,7 @@ class Bag:
     Methods:
         __init__():
             Initializes an empty bag.
-        isEmpty():
+        is_empty():
             Checks if the bag is empty.
         add(item):
             Adds an item to the bag.
@@ -171,6 +205,17 @@ class Bag:
         self.items = []
 
     def isEmpty(self):
+        """
+        Deprecated: Use is_empty() instead.
+        """
+        warnings.warn(
+            "isEmpty() is deprecated, use is_empty() instead",
+            DeprecationWarning,
+            stacklevel=2
+        )
+        return self.items == []
+    
+    def is_empty(self):
         return self.items == []
 
     def add(self, item):
