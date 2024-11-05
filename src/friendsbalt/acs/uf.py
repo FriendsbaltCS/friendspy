@@ -1,11 +1,55 @@
 class QuickFind:
+    """
+    QuickFind is a data structure for solving the dynamic connectivity problem.
+    It supports union and find operations, along with connected queries.
+    Attributes:
+        id (list): List of integers representing the connected components.
+    Methods:
+        __init__(N):
+            Initializes the QuickFind data structure with N elements.
+        connected(p, q):
+            Checks if elements p and q are in the same connected component.
+        union(p, q):
+            Merges the connected components containing p and q.
+        find(p):
+            Finds the connected component that p belongs to.
+    """
     def __init__(self, N):
         self.id = list(range(N))
 
     def connected(self, p, q):
+        """
+        Check if two elements are connected.
+
+        Parameters:
+        p (int): The first element.
+        q (int): The second element.
+
+        Returns:
+        bool: True if the elements are connected, False otherwise.
+        """
         return self.id[p] == self.id[q]
+    
+    def find(self, p):
+        """
+        Find the identifier for the given element.
+
+        Parameters:
+        p (int): The element to find the identifier for.
+
+        Returns:
+        int: The identifier of the given element.
+        """
+        return self.id[p]
 
     def union(self, p, q):
+        """
+        Merges the set containing element p with the set containing element q.
+
+        Args:
+            p (int): The first element.
+            q (int): The second element.
+        """
         pid = self.id[p]
         qid = self.id[q]
         for i in range(len(self.id)):
@@ -13,18 +57,73 @@ class QuickFind:
                 self.id[i] = qid
 
 class QuickUnion:
+    """
+    A class to represent the Quick Union data structure.
+    Attributes
+    ----------
+    id : list
+        A list where the index represents the node and the value at that index represents the parent node.
+    Methods
+    -------
+    __init__(N):
+        Initializes the Quick Union data structure with N nodes.
+    root(i):
+        Finds the root of node i.
+    connected(p, q):
+        Checks if nodes p and q are connected.
+    union(p, q):
+        Connects nodes p and q.
+    """
     def __init__(self, N):
+        """
+        Initializes the UF class with N elements.
+
+        Args:
+            N (int): The number of elements.
+        """
         self.id = list(range(N))
 
     def root(self, i):
+        """
+        Finds the root of the element `i` in the union-find data structure.
+
+        This method follows the chain of parent pointers from the element `i` 
+        up the tree until it reaches the root element, which is an element 
+        that is its own parent.
+
+        Args:
+            i (int): The element for which to find the root.
+
+        Returns:
+            int: The root of the element `i`.
+        """
         while i != self.id[i]:
             i = self.id[i]
         return i
 
     def connected(self, p, q):
+        """
+        Check if two elements are connected.
+
+        This method determines if the two elements `p` and `q` are in the same connected component.
+
+        Args:
+            p (int): The first element.
+            q (int): The second element.
+
+        Returns:
+            bool: True if the elements `p` and `q` are connected, False otherwise.
+        """
         return self.root(p) == self.root(q)
 
     def union(self, p, q):
+        """
+        Perform the union operation on two elements p and q.
+        
+        Args:
+            p (int): The first element.
+            q (int): The second element.
+        """
         i = self.root(p)
         j = self.root(q)
         self.id[i] = j
