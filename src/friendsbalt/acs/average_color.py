@@ -1,4 +1,14 @@
 def average_rgb(color1, color2):
+    """
+    Calculate the average RGB color between two given RGB colors.
+
+    Args:
+        color1 (tuple): A tuple representing the first RGB color (r1, g1, b1).
+        color2 (tuple): A tuple representing the second RGB color (r2, g2, b2).
+
+    Returns:
+        tuple: A tuple representing the average RGB color (r, g, b).
+    """
     r1, g1, b1 = color1
     r2, g2, b2 = color2
     return int(round((r1 + r2) / 2)), int(round((g1 + g2) / 2)), int(round((b1 + b2) / 2))
