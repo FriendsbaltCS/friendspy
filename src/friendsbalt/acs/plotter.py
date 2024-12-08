@@ -2,55 +2,47 @@ import matplotlib.pyplot as plt
 
 class Plotter:
     """
-    A class used to create and manage plots using matplotlib.
-    Attributes
-    ----------
-    fig : matplotlib.figure.Figure
-        The figure object for the plot.
-    ax : matplotlib.axes._axes.Axes
-        The axes object for the plot.
-    color : str
-        The color used for plotting points and lines.
-    marker_size : int
-        The size of the markers used for plotting points.
-    line_width : int
-        The width of the lines used for plotting lines.
+    A simple plotter class for plotting points and lines. Based on matplotlib.
+
     Methods
     -------
     set_color(color)
         Sets the color for plotting points and lines.
     set_marker_size(size)
-        Sets the size of the markers for plotting points.
+        Sets the size of the markers used for plotting points.
     set_line_width(width)
-        Sets the width of the lines for plotting lines.
+        Sets the width of the lines used for plotting lines.
     plot_point(x, y)
-        Plots a point at the given (x, y) coordinates.
-    plot_line(x1, y1, x2, y2)
-        Plots a line between the given (x1, y1) and (x2, y2) coordinates.
+        Plots a point at the given x and y coordinates.
+    plot_line(p1, p2)
+        Plots a line between the points p1 and p2.
     show()
         Displays the plot.
     """
     def __init__(self):
-        self.fig, self.ax = plt.subplots()
-        self.color = 'blue'
-        self.marker_size = 5
-        self.line_width = 1
-        self.ax.axis('off')  # Hide the axes by default
+        self._fig, self._ax = plt.subplots()
+        self._color = 'blue'
+        self._marker_size = 5
+        self._line_width = 1
+        self._ax.axis('off')  # Hide the axes by default
 
     def set_color(self, color):
-        self.color = color
+        self._color = color
 
     def set_marker_size(self, size):
-        self.marker_size = size
+        self._marker_size = size
 
     def set_line_width(self, width):
-        self.line_width = width
+        self._line_width = width
 
-    def plot_point(self, x, y):
-        self.ax.plot(x, y, color=self.color, marker='o', markersize=self.marker_size)
+    def plot_point(self, p):
+        x, y = p
+        self._ax.plot(x, y, color=self._color, marker='o', markersize=self._marker_size)
 
-    def plot_line(self, x1, y1, x2, y2):
-        self.ax.plot([x1, x2], [y1, y2], color=self.color, linewidth=self.line_width)
+    def plot_line(self, p1, p2):
+        x1, y1 = p1
+        x2, y2 = p2
+        self._ax.plot([x1, x2], [y1, y2], color=self._color, linewidth=self._line_width)
 
     def show(self):
         plt.show()
