@@ -101,8 +101,20 @@ class Stack:
     def pop(self):
         return self.items.pop()
 
-    def peek(self):
-        return self.items[len(self.items)-1]
+    def peek(self, index=1):
+        """
+        Returns the item at the given index from the end of the list without removing it.
+
+        Args:
+            index (int): The position from the end of the list to peek at. Defaults to 1.
+
+        Returns:
+            object: The item at the specified index from the end of the list.
+
+        Raises:
+            IndexError: If the index is out of range.
+        """
+        return self.items[-index]
 
     def size(self):
         return len(self.items)
