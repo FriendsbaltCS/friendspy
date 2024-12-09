@@ -18,6 +18,8 @@ class Plotter:
         Plots a line between the points p1 and p2.
     show()
         Displays the plot.
+    save(filename)
+        Saves the plot to a file.
     """
     def __init__(self):
         self._fig, self._ax = plt.subplots()
@@ -47,12 +49,16 @@ class Plotter:
     def show(self):
         plt.show()
 
+    def save(self, filename):
+        self._fig.savefig(filename)
+
 if __name__ == "__main__":
     # Example usage:
     plotter = Plotter()
     plotter.set_color('red')
     plotter.set_marker_size(10)
-    plotter.plot_point(1, 2)
+    plotter.plot_point((1, 2))
     plotter.set_line_width(2)
-    plotter.plot_line(1, 2, 3, 4)
+    plotter.plot_line((1, 2), (3, 4))
+    plotter.save('plot.png')
     plotter.show()
