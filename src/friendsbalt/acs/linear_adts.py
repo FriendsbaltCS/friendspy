@@ -128,6 +128,9 @@ class Stack:
             raise StopIteration
         self.index -= 1
         return self.items[self.index]
+    
+    def __repr__(self):
+        return f"Stack({self.items})"
 
 class Deque:
     """
