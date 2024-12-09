@@ -9,7 +9,7 @@ class Vector:
         self.dim = len(args)
 
     @classmethod
-    def from_points(p1, p2):
+    def from_points(cls, p1, p2):
         return Vector(*(b - a for a, b in zip(p1, p2))) 
 
     def __add__(self, other):
